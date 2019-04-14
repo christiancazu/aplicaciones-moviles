@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">App</string>
+    <string name="btn_text">Click Me</string>
+    <string name="switcher_message_true">Hello world</string>
+    <string name="switcher_message_false">Good bye world</string>
 </resources>

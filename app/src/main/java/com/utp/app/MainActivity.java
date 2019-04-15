@@ -8,16 +8,9 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    // declaring variables
-    private TextView txv;
-    private boolean switcher = true;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        // setting txv with the id assigned in activity_main.xml
-        txv = findViewById(R.id.txvMessage);
     }
 }

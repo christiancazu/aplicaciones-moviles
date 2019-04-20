@@ -54,6 +54,17 @@
         tools:layout_editor_absoluteY="255dp"
         tools:ignore="MissingConstraints" />
 
+    <Button
+        android:id="@+id/btn_join_in"
+        android:onClick="Authenticate"
+        style="@style/etx_width"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_text"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="151dp"
+        tools:layout_editor_absoluteY="318dp" />
+
 
 
 </android.support.constraint.ConstraintLayout>

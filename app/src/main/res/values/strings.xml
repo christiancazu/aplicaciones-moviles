@@ -4,4 +4,6 @@
     <string name="main_lbl_pwd">password:</string>
     <string name="main_ht_name">my name</string>
     <string name="main_ht_pwd">my password</string>
+    <string name="btn_text">join in</string>
+    <string name="txt_data_user">join in</string>
 </resources>

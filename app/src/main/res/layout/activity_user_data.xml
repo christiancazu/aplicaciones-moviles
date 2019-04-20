@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserData">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_lbl_name"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="154dp"
+        tools:layout_editor_absoluteY="297dp" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_lbl_pwd"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="331dp" />
+
+    <TextView
+        android:id="@+id/txt_data_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="215dp"
+        tools:layout_editor_absoluteY="297dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="215dp"
+        tools:layout_editor_absoluteY="331dp" />
+
+</android.support.constraint.ConstraintLayout>

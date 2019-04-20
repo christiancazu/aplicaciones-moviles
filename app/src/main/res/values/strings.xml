@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">App</string>
     <string name="btn_join_in">INGRESAR</string>
-    <string name="etx_user_code">código de usuario</string>
-    <string name="etx_password">password</string>
+    <string name="ht_code">código de usuario</string>
+    <string name="ht_password">password</string>
     <string name="txv_join_data">Ingrese datos</string>
+    <string name="title_activity_result">Result</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="access_denied">Access denied</string>
 </resources>

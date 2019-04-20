@@ -8,14 +8,18 @@
 
     <EditText
         style="@style/editText"
-        android:hint="@string/etx_user_code" />
+        android:hint="@string/ht_code"
+        android:id="@+id/txt_code"/>
 
     <EditText
         style="@style/editText"
-        android:hint="@string/etx_password" />
+        android:hint="@string/ht_password"
+        android:id="@+id/txt_pwd" />
 
     <Button
         style="@style/button"
-        android:text="@string/btn_join_in" />
+        android:text="@string/btn_join_in"
+        android:id="@+id/btn_join"
+        android:onClick="authenticate" />
 
 </LinearLayout>

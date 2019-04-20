@@ -8,4 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="etx_width">
+        <item name="android:width">200dp</item>
+    </style>
+
 </resources>

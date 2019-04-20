@@ -6,13 +6,54 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="36dp"></LinearLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="@string/main_lbl_name"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.223"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.28" />
+
+    <EditText
+        android:id="@+id/txt_name"
+        style="@style/etx_width"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/main_ht_name"
+        tools:layout_editor_absoluteX="151dp"
+        tools:layout_editor_absoluteY="185dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_lbl_pwd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.223"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.38" />
+
+    <EditText
+        android:id="@+id/txt_pwd"
+        style="@style/etx_width"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/main_ht_pwd"
+        tools:layout_editor_absoluteX="151dp"
+        tools:layout_editor_absoluteY="255dp"
+        tools:ignore="MissingConstraints" />
+
+
 
 </android.support.constraint.ConstraintLayout>

@@ -8,4 +8,41 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- linear layout: layout width/height, orientation, gravity -->
+    <style name="form_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- wrap content dimensions -->
+    <style name="wrapContentBase">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <!-- width fields -->
+    <style name="widthFieldBase" parent="wrapContentBase">
+        <item name="android:width">200dp</item>
+    </style>
+
+    <!-- TextView fields -->
+    <style name="textView" parent="wrapContentBase">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <!-- EditText form -->
+    <style name="editText" parent="widthFieldBase">
+        <item name="android:textColorHint">#84d3b3</item>
+    </style>
+
+    <!-- Button form -->
+    <style name="button" parent="widthFieldBase">
+        <item name="android:background">@color/colorAccent</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+
 </resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/form_layout">
+
+    <TextView
+        style="@style/textView"
+        android:text="@string/txv_join_data" />
+
+    <EditText
+        style="@style/editText"
+        android:hint="@string/etx_user_code" />
+
+    <EditText
+        style="@style/editText"
+        android:hint="@string/etx_password" />
+
+    <Button
+        style="@style/button"
+        android:text="@string/btn_join_in" />
+
+</LinearLayout>

@@ -1,11 +1,7 @@
 UTP - __Desarrollo en aplicaciones móviles__
 ==========================================
 
-## practice 2
-* login form design
+## practice 3
+* lab U1-Guía-Lab-03
 
-    ![Login Form](/images/practice2.png)
 
-* changes
-    * improved project structure using linear layout as container of form
-    * improved styles for each tags

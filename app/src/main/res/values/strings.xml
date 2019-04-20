@@ -1,12 +1,13 @@
 <resources>
     <string name="app_name">App</string>
-    <string name="btn_join_in">INGRESAR</string>
-    <string name="ht_code">código de usuario</string>
+    <string name="btn_join_in">join</string>
+    <string name="btn_clean_fields">clean fields</string>
+    <string name="ht_code">user code</string>
     <string name="ht_password">password</string>
-    <string name="txv_join_data">Ingrese datos</string>
+    <string name="txv_auth">Authentication</string>
     <string name="title_activity_result">Result</string>
-    <string name="title_activity_main2">Main2Activity</string>
-    <string name="access_denied">Access denied</string>
     <string name="title_activity_denied">Denied</string>
+    <string name="access_denied">Access denied</string>
+    <string name="access_success">Access successfully</string>
     <string name="cant_be_auth">could not be authenticated on system</string>
 </resources>

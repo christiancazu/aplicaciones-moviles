@@ -26,8 +26,10 @@ public class Denied extends AppCompatActivity {
             }
         });
 
+        // receiving value passed by the previous activity
         Bundle b = this.getIntent().getExtras();
         if (b != null) {
+            // setting TextView text with received values from the previous activity
             TextView txtMsg = findViewById(R.id.lbl_result);
             txtMsg.setText(b.getString("result") + " " + getResources().getString(R.string.cant_be_auth));
         }

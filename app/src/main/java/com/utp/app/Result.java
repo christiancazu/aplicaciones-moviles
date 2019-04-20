@@ -1,5 +1,6 @@
 package com.utp.app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -7,8 +8,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.HashMap;
 
 public class Result extends AppCompatActivity {
+
+    TextView txtCode, txtPwd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +32,18 @@ public class Result extends AppCompatActivity {
             }
         });
 
-        Bundle b = this.getIntent().getExtras();
-        if (b != null) {
-            TextView txtMsg = findViewById(R.id.lbl_result);
-            txtMsg.setText(b.getString("result"));
-        }
+        // receiving Intent values from the previous activity
+        Intent intent = getIntent();
+        // saving in HashMap values passed from the previous activity
+        HashMap<String, String> hmResult = (HashMap<String, String>) intent.getSerializableExtra("result");
+
+        // setting TextView variables with ids from activity_result
+        txtCode = findViewById(R.id.txv_code);
+        txtPwd = findViewById(R.id.txv_pwd);
+
+        // setting TextView text with HashMap values from the previous activity
+        txtCode.setText("code: " + hmResult.get("code"));
+        txtPwd.setText("password: " + hmResult.get("pwd"));
     }
 
 }

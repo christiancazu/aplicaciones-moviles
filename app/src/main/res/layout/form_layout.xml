@@ -4,7 +4,7 @@
 
     <TextView
         style="@style/textView"
-        android:text="@string/txv_join_data" />
+        android:text="@string/txv_auth" />
 
     <EditText
         style="@style/editText"
@@ -17,9 +17,15 @@
         android:id="@+id/txt_pwd" />
 
     <Button
-        style="@style/button"
+        style="@style/buttonJoin"
         android:text="@string/btn_join_in"
         android:id="@+id/btn_join"
         android:onClick="authenticate" />
+
+    <Button
+        style="@style/buttonClean"
+        android:text="@string/btn_clean_fields"
+        android:id="@+id/btn_clean_fields"
+        android:onClick="cleanFields" />
 
 </LinearLayout>

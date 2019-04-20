@@ -8,9 +8,18 @@
     tools:context=".Result"
     tools:showIn="@layout/activity_result">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/lbl_result" />
+    <LinearLayout
+        style="@style/form_layout"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            style="@style/textViewMessage"
+            android:id="@+id/txv_code" />
+
+        <TextView
+            style="@style/textViewMessage"
+            android:id="@+id/txv_pwd" />
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

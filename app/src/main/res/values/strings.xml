@@ -7,4 +7,6 @@
     <string name="title_activity_result">Result</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="access_denied">Access denied</string>
+    <string name="title_activity_denied">Denied</string>
+    <string name="cant_be_auth">could not be authenticated on system</string>
 </resources>

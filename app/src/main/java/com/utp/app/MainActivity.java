@@ -30,7 +30,10 @@ public class MainActivity extends AppCompatActivity {
             aResult.putExtra("result", strCode);
             startActivity(aResult);
         } else {
-            Toast.makeText(this, getResources().getString(R.string.access_denied), Toast.LENGTH_SHORT).show();
+            // Toast.makeText(this, getResources().getString(R.string.access_denied), Toast.LENGTH_SHORT).show();
+            Intent aDenied = new Intent(this, Denied.class);
+            aDenied.putExtra("result", strCode);
+            startActivity(aDenied);
         }
     }
 

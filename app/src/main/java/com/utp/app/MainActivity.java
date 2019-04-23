@@ -6,12 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import models.User;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_data);
+        setContentView(R.layout.activity_main);
     }
 
     public void Authenticate(View v) {
@@ -26,4 +28,5 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("data", user);
         startActivity(intent);
     }
+
 }

@@ -1,4 +1,4 @@
-package com.utp.app;
+package models;
 
 import java.io.Serializable;
 

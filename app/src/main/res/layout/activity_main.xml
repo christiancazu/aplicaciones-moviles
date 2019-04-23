@@ -1,72 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/main_lbl_name"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.206"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.259" />
+    <TableLayout
+        style="@style/tbl_layout"
+        tools:ignore="MissingConstraints">
 
-    <EditText
-        android:id="@+id/txt_name"
-        style="@style/etx_width"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/main_ht_name"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="151dp"
-        tools:layout_editor_absoluteY="174dp"
-        android:autofillHints=""
-        android:inputType="" tools:targetApi="o" />
+        <TableRow style="@style/tbl_row">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/main_lbl_pwd"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.213"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.358" />
+            <TextView
+                style="@style/txv_group"
+                android:gravity="center"
+                android:text="@string/main_lbl_name" />
 
-    <EditText
-        android:id="@+id/txt_pwd"
-        style="@style/etx_width"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/main_ht_pwd"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="151dp"
-        tools:layout_editor_absoluteY="245dp"
-        android:autofillHints=""
-        android:inputType="" tools:targetApi="o" />
+            <EditText
+                android:id="@+id/txt_name"
+                style="@style/etx_group"
+                android:hint="@string/main_ht_name" />
 
-    <Button
-        android:id="@+id/btn_join_in"
-        style="@style/etx_width"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="Authenticate"
-        android:text="@string/btn_text"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="151dp"
-        tools:layout_editor_absoluteY="300dp" />
+        </TableRow>
 
-    <TextView
-        android:text="@string/app_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints" />
+        <TableRow style="@style/tbl_row">
+
+            <TextView
+                style="@style/txv_group"
+                android:gravity="center"
+                android:text="@string/main_lbl_pwd" />
+
+            <EditText
+                android:id="@+id/txt_pwd"
+                style="@style/etx_group"
+                android:hint="@string/main_ht_pwd" />
+
+        </TableRow>
+
+        <TableRow style="@style/tbl_row">
+
+            <Button
+                android:id="@+id/btn_join_in"
+                android:layout_column="1"
+                android:onClick="Authenticate"
+                android:text="@string/btn_text" />
+
+        </TableRow>
+
+    </TableLayout>
 
 </android.support.constraint.ConstraintLayout>

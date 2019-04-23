@@ -8,8 +8,27 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="etx_width">
+    <style name="tbl_layout">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tbl_row">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <style name="txv_group" parent="tbl_row">
+    </style>
+
+    <style name="etx_group" parent="tbl_row">
         <item name="android:width">200dp</item>
+    </style>
+
+    <style name="txv_group.data" parent="txv_group">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
     </style>
 
 </resources>

@@ -37,8 +37,6 @@ public class Home extends Activity {
         i.putExtra("message",
                 isAssistRegistered ? "exit registered" : "assist registered");
 
-        ((Global) this.getApplication()).setAssistRegistered(true);
-
         setRegisterAction();
         startActivity(i);
     }

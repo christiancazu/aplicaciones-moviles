@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.utp.app.models.User;
 
@@ -15,7 +16,7 @@ import java.util.Date;
 public class Assistance extends Activity {
 
     User user;
-    TextView txvUser, txvAssist, txvcurrentAction;
+    TextView txvUser, txvAssist, txvCurrentAction;
     DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
     Date date = new Date();
     Intent i;
@@ -28,13 +29,15 @@ public class Assistance extends Activity {
         user = ((Global) this.getApplication()).getUser();
 
         txvUser = findViewById(R.id.txv_user);
-        txvcurrentAction = findViewById(R.id.txv_currentAction);
+        txvCurrentAction = findViewById(R.id.txv_currentAction);
         txvAssist = findViewById(R.id.txv_assist);
 
-        // toastMessage(getResources().getString(R.string.assist_success));
+        Toast.makeText(this,
+                getIntent().getStringExtra("message"),
+                Toast.LENGTH_SHORT).show();
 
         txvUser.setText(user.fullName());
-        txvcurrentAction.setText(getIntent().getStringExtra("message") + " on:");
+        txvCurrentAction.setText(getIntent().getStringExtra("message") + " on:");
         txvAssist.setText(dateFormat.format(date));
     }
 

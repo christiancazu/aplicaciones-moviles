@@ -33,7 +33,7 @@ public class Assistance extends Activity {
 
         toastMessage(getResources().getString(R.string.assist_success));
 
-        txvUser.setText("the assistance of this user: [" + user.getCode() + "] has been registered on: ");
+        txvUser.setText(user.fullName());
         txvAssist.setText(dateFormat.format(date));
     }
 

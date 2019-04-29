@@ -11,7 +11,7 @@ import com.utp.app.models.User;
 
 public class Register extends Activity {
 
-    EditText etxCode, etxPwd;
+    EditText etxName, etxSurname, etxPwd;
     Intent i;
 
     @Override
@@ -19,14 +19,15 @@ public class Register extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        etxCode = findViewById(R.id.etx_code);
+        etxName = findViewById(R.id.etx_name);
+        etxSurname = findViewById(R.id.etx_surname);
         etxPwd = findViewById(R.id.etx_pwd);
     }
 
     public void signUp(View v) {
-
         User user = new User(
-                etxCode.getText().toString(),
+                etxName.getText().toString(),
+                etxSurname.getText().toString(),
                 etxPwd.getText().toString());
 
         ((Global) this.getApplication()).setUser(user);
@@ -37,7 +38,7 @@ public class Register extends Activity {
                 Toast.LENGTH_SHORT)
                 .show();
 
-        i = new Intent(this, MainActivity.class);
+        i = new Intent(this, UserData.class);
         startActivity(i);
     }
 

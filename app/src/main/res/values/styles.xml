@@ -31,7 +31,7 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
-    <!-- Button on form -->
+    <!-- Button on form base-->
     <style name="btnForm" parent="formChildsMargin">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -48,18 +48,32 @@
         <item name="android:background">@color/primary_dark</item>
     </style>
 
+    <!-- TextView on form base -->
+    <style name="txvForm">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/tvw_title_height</item>
+    </style>
+
+    <!-- TextView title -->
+    <style name="tvwTitle" parent="txvForm">
+        <item name="android:textColor">@color/accent</item>
+    </style>
+
+    <!-- TextView primary -->
+    <style name="tvwPrimary" parent="txvForm">
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+
+    <!-- TextView secondary -->
+    <style name="tvwSecondary" parent="txvForm">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
     <!-- ImageView logo -->
     <style name="imgLogo">
         <item name="android:layout_width">@dimen/img_size</item>
         <item name="android:layout_height">@dimen/img_size</item>
-    </style>
-
-    <!-- TextView title -->
-    <style name="tvwTitle">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">@dimen/tvw_title_height</item>
-        <item name="android:textColor">@color/accent</item>
     </style>
 
 </resources>

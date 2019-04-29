@@ -7,10 +7,15 @@
         android:text="@string/title_register" />
 
     <EditText
-        android:hint="@string/ht_code"
-        android:id="@+id/etx_code"
+        android:hint="@string/ht_name"
+        android:id="@+id/etx_name"
         style="@style/etxForm" />
 
+    <EditText
+        android:hint="@string/ht_surname"
+        android:id="@+id/etx_surname"
+        style="@style/etxForm" />
+   
     <EditText
         android:hint="@string/ht_pwd"
         android:id="@+id/etx_pwd"

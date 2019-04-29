@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Assistance"></activity>
+        <activity android:name=".UserData"></activity>
+        <activity android:name=".Assistance" />
         <activity android:name=".Register" />
         <activity android:name=".Home" />
         <activity android:name=".MainActivity">

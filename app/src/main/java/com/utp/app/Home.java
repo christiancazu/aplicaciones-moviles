@@ -16,7 +16,6 @@ public class Home extends Activity {
     }
 
     public void registerAssistance(View v) {
-
         i = new Intent(this, Assistance.class);
         startActivity(i);
     }

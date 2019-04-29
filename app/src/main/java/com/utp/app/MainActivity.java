@@ -13,22 +13,23 @@ public class MainActivity extends Activity {
 
     Intent i;
     EditText etxCode, etxPwd;
-    User user, authUser;
+    User user;
+    String strCode, strPwd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        user =  ((Global) this.getApplication()).getUser();
+        user = ((Global) this.getApplication()).getUser();
 
         etxCode = findViewById(R.id.etx_code);
         etxPwd = findViewById(R.id.etx_pwd);
     }
 
     public void signIn(View v) {
-
-        authUser = new User(etxCode.getText().toString(), etxPwd.getText().toString());
+        strCode = etxCode.getText().toString();
+        strPwd = etxPwd.getText().toString();
 
         if (user != null && validateCredentials()) {
             toastMessage(getResources().getString(R.string.access_success));
@@ -39,26 +40,22 @@ public class MainActivity extends Activity {
     }
 
     public void signUp(View v) {
-
         i = new Intent(this, Register.class);
         startActivity(i);
     }
 
     protected boolean validateCredentials() {
-
         return
-            user.getCode().equals(authUser.getPassword()) &&
-            user.getPassword().equals(authUser.getPassword());
+            user.getCode().equals(strCode) &&
+            user.getPassword().equals(strPwd);
     }
 
     protected void redirectToHome() {
-
         i = new Intent(this, Home.class);
         startActivity(i);
     }
 
     protected void toastMessage(String msg) {
-
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 

@@ -1,16 +1,22 @@
 <resources>
-    <string name="app_name">UTP Assistance</string>
+    <string name="app_name">UTP Assist Control</string>
     <string name="btn_sign_in">sign in</string>
     <string name="btn_sign_up">sign up</string>
     <string name="btn_register_assist">register assist</string>
     <string name="btn_logout">Log out</string>
+    <string name="btn_goToLogin">Sign in now</string>
     <string name="ht_code">user code</string>
     <string name="ht_pwd">password</string>
+    <string name="ht_name">name</string>
+    <string name="ht_surname">surname</string>
     <string name="title_auth">Authentication</string>
     <string name="title_welcome">Welcome to UTP</string>
     <string name="title_register">Register</string>
     <string name="title_activity_result">Result</string>
     <string name="title_activity_denied">Denied</string>
+    <string name="user">User:</string>
+    <string name="code">Code:</string>
+    <string name="assist_registered">Assist registered on:</string>
     <string name="access_denied">Access denied</string>
     <string name="access_success">Access successfully</string>
     <string name="register_success">Register successfully</string>

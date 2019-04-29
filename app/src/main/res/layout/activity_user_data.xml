@@ -12,16 +12,15 @@
 
     <TextView
         style="@style/tvwPrimary"
-        android:text="@string/assist_registered" />
+        android:text="@string/code" />
 
     <TextView
         style="@style/tvwSecondary"
-        android:id="@+id/txv_assist" />
+        android:id="@+id/txv_code" />
 
     <Button
         style="@style/btnFormPrimary"
-        android:text="@string/btn_logout"
-        android:id="@+id/btn_register"
-        android:onClick="logout" />
+        android:text="@string/btn_goToLogin"
+        android:onClick="goToLogin" />
 
 </LinearLayout>

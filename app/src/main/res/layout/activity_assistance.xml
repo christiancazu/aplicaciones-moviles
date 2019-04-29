@@ -12,7 +12,7 @@
 
     <TextView
         style="@style/tvwPrimary"
-        android:text="@string/assist_registered" />
+        android:id="@+id/txv_currentAction"  />
 
     <TextView
         style="@style/tvwSecondary"
@@ -20,8 +20,7 @@
 
     <Button
         style="@style/btnFormPrimary"
-        android:text="@string/btn_logout"
-        android:id="@+id/btn_register"
-        android:onClick="logout" />
+        android:text="@string/btn_goBack"
+        android:onClick="goBack" />
 
 </LinearLayout>

@@ -2,9 +2,11 @@
     <string name="app_name">UTP Assist Control</string>
     <string name="btn_sign_in">sign in</string>
     <string name="btn_sign_up">sign up</string>
-    <string name="btn_register_assist">register assist</string>
+    <string name="btn_register_assist_time">register assist time</string>
+    <string name="btn_register_exit_time">register exit time</string>
     <string name="btn_logout">Log out</string>
     <string name="btn_goToLogin">Sign in now</string>
+    <string name="btn_goBack">Go back</string>
     <string name="ht_code">user code</string>
     <string name="ht_pwd">password</string>
     <string name="ht_name">name</string>
@@ -22,4 +24,5 @@
     <string name="register_success">Register successfully</string>
     <string name="assist_success">Assistance has been registered successfully</string>
     <string name="cant_be_auth">could not be authenticated on system</string>
+    <string name="logout_success">log out successfully</string>
 </resources>

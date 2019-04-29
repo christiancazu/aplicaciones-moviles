@@ -25,10 +25,10 @@ public class User implements Serializable {
     private void generateCode() {
         Random r = new Random();
         int result = r.nextInt(9999 - 1000) + 1000;
-        code = Integer.toString(result);
+        this.code = Integer.toString(result);
     }
 
     public String fullName() {
-        return name + " " + surname;
+        return this.name + " " + this.surname;
     }
 }

@@ -6,10 +6,18 @@
         style="@style/tvwTitle"
         android:text="@string/title_welcome" />
 
+    <TextView
+        style="@style/tvwPrimary"
+        android:id="@+id/tvw_user" />
+
     <Button
         style="@style/btnFormPrimary"
-        android:text="@string/btn_register_assist"
         android:id="@+id/btn_register"
-        android:onClick="registerAssistance" />
+        android:onClick="registerActivity" />
+
+    <Button
+        style="@style/btnFormSecondary"
+        android:text="@string/btn_logout"
+        android:onClick="logout" />
 
 </LinearLayout>

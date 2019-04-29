@@ -6,8 +6,9 @@
     <string name="btn_logout">Log out</string>
     <string name="ht_code">user code</string>
     <string name="ht_pwd">password</string>
-    <string name="txv_auth">Authentication</string>
-    <string name="txv_welcome">Welcome to App</string>
+    <string name="title_auth">Authentication</string>
+    <string name="title_welcome">Welcome to UTP</string>
+    <string name="title_register">Register</string>
     <string name="title_activity_result">Result</string>
     <string name="title_activity_denied">Denied</string>
     <string name="access_denied">Access denied</string>

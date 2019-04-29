@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/form">
+
+    <ImageView
+        style="@style/imgLogo"
+        android:src="@drawable/utp" />
+
+    <TextView
+        style="@style/tvwTitle"
+        android:text="@string/app_name" />
+
+    <EditText
+        android:hint="@string/ht_code"
+        android:id="@+id/etx_code"
+        style="@style/etxForm" />
+
+    <EditText
+        android:hint="@string/ht_pwd"
+        android:id="@+id/etx_pwd"
+        style="@style/etxForm" />
+
+    <Button
+        style="@style/btnFormPrimary"
+        android:text="@string/btn_sign_in"
+        android:onClick="signIn" />
+
+    <Button
+        style="@style/btnFormSecondary"
+        android:text="@string/btn_sign_up"
+        android:onClick="signUp" />
+
+</LinearLayout>

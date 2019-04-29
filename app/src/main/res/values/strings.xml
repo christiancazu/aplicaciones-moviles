@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">App</string>
+    <string name="app_name">UTP Assistance</string>
+    <string name="btn_sign_in">sign in</string>
+    <string name="btn_sign_up">sign up</string>
+    <string name="btn_register_assist">register assist</string>
+    <string name="btn_logout">Log out</string>
+    <string name="ht_code">user code</string>
+    <string name="ht_pwd">password</string>
+    <string name="txv_auth">Authentication</string>
+    <string name="txv_welcome">Welcome to App</string>
+    <string name="title_activity_result">Result</string>
+    <string name="title_activity_denied">Denied</string>
+    <string name="access_denied">Access denied</string>
+    <string name="access_success">Access successfully</string>
+    <string name="register_success">Register successfully</string>
+    <string name="assist_success">Assistance has been registered successfully</string>
+    <string name="cant_be_auth">could not be authenticated on system</string>
 </resources>

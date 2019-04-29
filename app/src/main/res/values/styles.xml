@@ -10,4 +10,56 @@
         <item name="android:textColor">@color/text_secondary</item>
     </style>
 
+    <!-- margin base for all items on form -->
+    <style name="formChildsMargin">
+        <item name="android:layout_margin">@dimen/form_margin</item>
+    </style>
+
+    <!-- form layout -->
+    <style name="form">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginLeft">@dimen/form_margin</item>
+        <item name="android:layout_marginRight">@dimen/form_margin</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <!-- EditText on form -->
+    <style name="etxForm" parent="formChildsMargin">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- Button on form -->
+    <style name="btnForm" parent="formChildsMargin">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_light</item>
+    </style>
+
+    <!-- Button primary -->
+    <style name="btnFormPrimary" parent="btnForm">
+        <item name="android:background">@color/primary</item>
+    </style>
+
+    <!-- Button secondary -->
+    <style name="btnFormSecondary" parent="btnForm">
+        <item name="android:background">@color/primary_dark</item>
+    </style>
+
+    <!-- ImageView logo -->
+    <style name="imgLogo">
+        <item name="android:layout_width">@dimen/img_size</item>
+        <item name="android:layout_height">@dimen/img_size</item>
+    </style>
+
+    <!-- TextView title -->
+    <style name="tvwTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/tvw_title_height</item>
+        <item name="android:textColor">@color/accent</item>
+    </style>
+
 </resources>

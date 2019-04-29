@@ -17,7 +17,7 @@ UTP - Desarrollo en aplicaciones móviles
     
     3.El sistema asignará un código aleatorio al usuario registrado.
     
-    ![4](images/4.PNG)
+    ![4](images/4.png)
     
     4.Presionando el boton SIGN IN NOW el usuario volverá a la pantalla inicial, donde colocará su código y contraseña y presionará el boton SIGN IN para ingresar a la aplicación.
     
@@ -25,7 +25,7 @@ UTP - Desarrollo en aplicaciones móviles
     
     5.Si las credenciales son correctas el usuario será redirigido a la pantalla de bienvenida.
     
-    ![6](images/6.PNG)
+    ![6](images/6.png)
     
     6.Para registrar la asistencia el usuario presionará el boton REGISTER ASSIST TIME.
     
@@ -49,5 +49,5 @@ UTP - Desarrollo en aplicaciones móviles
     
     12.Presionando el boton LOG OUT el usuario saldrá de la aplicación y volverá a la pantalla inicial.
     
-    ![11](images/11.PNG)
+    ![11](images/11.png)
  

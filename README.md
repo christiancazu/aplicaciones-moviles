@@ -3,6 +3,10 @@ UTP - Desarrollo en aplicaciones móviles
 
 ## Práctica calificada 1
 
+### [Vídeo explicativo de la aplicación](https://youtu.be/2-w85nruiVM)
+
+### [Link de descarga de la APK](https://drive.google.com/open?id=1PzdsXYACNla9SOOUB9E2xHYEXDfGLXB-)
+
 ### Guía de usuario
 
 -   1.El usuario deberá registrarse antes de ingresar a la aplicación dando click en el boton SIGN UP.

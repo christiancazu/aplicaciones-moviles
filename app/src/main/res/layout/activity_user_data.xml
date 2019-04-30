@@ -7,20 +7,20 @@
         android:text="@string/user" />
 
     <TextView
-        style="@style/tvwSecondary"
-        android:id="@+id/txv_user" />
+        android:id="@+id/txv_user"
+        style="@style/tvwSecondary" />
 
     <TextView
         style="@style/tvwPrimary"
         android:text="@string/code" />
 
     <TextView
-        style="@style/tvwSecondary"
-        android:id="@+id/txv_code" />
+        android:id="@+id/txv_code"
+        style="@style/tvwSecondary" />
 
     <Button
         style="@style/btnFormPrimary"
-        android:text="@string/btn_goToLogin"
-        android:onClick="goToLogin" />
+        android:onClick="goToLogin"
+        android:text="@string/btn_goToLogin" />
 
 </LinearLayout>

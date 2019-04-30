@@ -7,17 +7,17 @@
         android:text="@string/title_welcome" />
 
     <TextView
-        style="@style/tvwPrimary"
-        android:id="@+id/tvw_user" />
+        android:id="@+id/tvw_user"
+        style="@style/tvwPrimary" />
 
     <Button
-        style="@style/btnFormPrimary"
         android:id="@+id/btn_register"
-        android:onClick="registerActivity" />
+        style="@style/btnFormPrimary"
+        android:onClick="registerAction" />
 
     <Button
         style="@style/btnFormSecondary"
-        android:text="@string/btn_logout"
-        android:onClick="logout" />
+        android:onClick="logout"
+        android:text="@string/btn_logout" />
 
 </LinearLayout>

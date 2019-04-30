@@ -11,24 +11,24 @@
         android:text="@string/app_name" />
 
     <EditText
-        android:hint="@string/ht_code"
         android:id="@+id/etx_code"
-        style="@style/etxForm" />
+        style="@style/etxForm"
+        android:hint="@string/ht_code" />
 
     <EditText
-        android:hint="@string/ht_pwd"
         android:id="@+id/etx_pwd"
         style="@style/etxForm"
+        android:hint="@string/ht_pwd"
         android:inputType="textPassword" />
 
     <Button
         style="@style/btnFormPrimary"
-        android:text="@string/btn_sign_in"
-        android:onClick="signIn" />
+        android:onClick="signIn"
+        android:text="@string/btn_sign_in" />
 
     <Button
         style="@style/btnFormSecondary"
-        android:text="@string/btn_sign_up"
-        android:onClick="signUp" />
+        android:onClick="signUp"
+        android:text="@string/btn_sign_up" />
 
 </LinearLayout>

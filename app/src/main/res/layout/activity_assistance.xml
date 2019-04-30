@@ -7,20 +7,20 @@
         android:text="@string/user" />
 
     <TextView
-        style="@style/tvwSecondary"
-        android:id="@+id/txv_user" />
+        android:id="@+id/txv_user"
+        style="@style/tvwSecondary" />
 
     <TextView
-        style="@style/tvwPrimary"
-        android:id="@+id/txv_currentAction"  />
+        android:id="@+id/txv_currentAction"
+        style="@style/tvwPrimary" />
 
     <TextView
-        style="@style/tvwSecondary"
-        android:id="@+id/txv_assist" />
+        android:id="@+id/txv_assist"
+        style="@style/tvwSecondary" />
 
     <Button
         style="@style/btnFormPrimary"
-        android:text="@string/btn_goBack"
-        android:onClick="goBack" />
+        android:onClick="goBack"
+        android:text="@string/btn_goBack" />
 
 </LinearLayout>

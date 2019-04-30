@@ -17,13 +17,17 @@ public class Global extends Application {
         this.user = user;
     }
 
-    public boolean isAssistRegistered() { return isAssistRegistered;  }
+    public boolean isAssistRegistered() {
+        return isAssistRegistered;
+    }
 
     public void setAssistRegistered(boolean assistRegistered) {
         this.isAssistRegistered = assistRegistered;
     }
 
-    public boolean isExitRegistered() { return isExitRegistered; }
+    public boolean isExitRegistered() {
+        return isExitRegistered;
+    }
 
     public void setExitRegistered(boolean exitRegistered) {
         isExitRegistered = exitRegistered;

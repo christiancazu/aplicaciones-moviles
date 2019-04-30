@@ -33,11 +33,12 @@ public class Assistance extends Activity {
         txvAssist = findViewById(R.id.txv_assist);
 
         Toast.makeText(this,
-                getIntent().getStringExtra("message"),
-                Toast.LENGTH_SHORT).show();
+                getIntent().getStringExtra("message") + " registered",
+                Toast.LENGTH_SHORT)
+                .show();
 
         txvUser.setText(user.fullName());
-        txvCurrentAction.setText(getIntent().getStringExtra("message") + " on:");
+        txvCurrentAction.setText(getIntent().getStringExtra("message") + " registered on:");
         txvAssist.setText(dateFormat.format(date));
     }
 

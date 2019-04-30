@@ -24,18 +24,17 @@ public class Home extends Activity {
         isExitRegistered = ((Global) this.getApplication()).isExitRegistered();
 
         btnRegister = findViewById(R.id.btn_register);
-
         txvUser = findViewById(R.id.tvw_user);
 
         setTxvUser();
         loadBtnRegister();
     }
 
-    public void registerActivity(View v) {
+    public void registerAction(View v) {
         i = new Intent(this, Assistance.class);
 
         i.putExtra("message",
-                isAssistRegistered ? "exit registered" : "assist registered");
+                isAssistRegistered ? "Exit" : "Assist");
 
         setRegisterAction();
         startActivity(i);

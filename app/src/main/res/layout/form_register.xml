@@ -9,16 +9,19 @@
     <EditText
         android:id="@+id/etx_name"
         style="@style/etxForm"
+        android:drawableStart="@drawable/ic_person"
         android:hint="@string/ht_name" />
 
     <EditText
         android:id="@+id/etx_surname"
         style="@style/etxForm"
+        android:drawableStart="@drawable/ic_person"
         android:hint="@string/ht_surname" />
 
     <EditText
         android:id="@+id/etx_pwd"
         style="@style/etxForm"
+        android:drawableStart="@drawable/ic_lock"
         android:hint="@string/ht_pwd"
         android:inputType="textPassword" />
 

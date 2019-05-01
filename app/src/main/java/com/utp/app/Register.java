@@ -12,7 +12,6 @@ import com.utp.app.models.User;
 public class Register extends Activity {
 
     EditText etxName, etxSurname, etxPwd;
-    Intent i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +37,7 @@ public class Register extends Activity {
                 Toast.LENGTH_SHORT)
                 .show();
 
-        i = new Intent(this, UserData.class);
+        Intent i = new Intent(this, UserData.class);
         startActivity(i);
     }
 

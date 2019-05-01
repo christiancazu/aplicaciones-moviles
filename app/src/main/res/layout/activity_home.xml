@@ -17,7 +17,7 @@
 
     <Button
         style="@style/btnFormSecondary"
-        android:onClick="logout"
+        android:onClick="logOut"
         android:text="@string/btn_logout" />
 
 </LinearLayout>

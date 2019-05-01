@@ -8,6 +8,7 @@
 
     <TextView
         android:id="@+id/txv_user"
+        android:drawableStart="@drawable/ic_person"
         style="@style/tvwSecondary" />
 
     <TextView
@@ -16,6 +17,7 @@
 
     <TextView
         android:id="@+id/txv_assist"
+        android:drawableStart="@drawable/ic_access_time"
         style="@style/tvwSecondary" />
 
     <Button

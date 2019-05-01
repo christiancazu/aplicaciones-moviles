@@ -46,11 +46,10 @@ public class Home extends Activity {
             return;
         }
 
-        if (isAssistRegistered) {
-            btnRegister.setText(getResources().getText(R.string.btn_register_exit_time));
-        } else {
-            btnRegister.setText(getResources().getText(R.string.btn_register_assist_time));
-        }
+        btnRegister.setText(getResources().getText(
+            isAssistRegistered
+                ? R.string.btn_register_exit_time
+                : R.string.btn_register_assist_time));
     }
 
     protected void setRegisterAction() {
@@ -61,7 +60,7 @@ public class Home extends Activity {
         }
     }
 
-    public void logout(View v) {
+    public void logOut(View v) {
         toastMessage(getResources().getText(R.string.logout_success).toString());
         i = new Intent(this, MainActivity.class);
         startActivity(i);

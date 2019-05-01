@@ -13,11 +13,13 @@
     <EditText
         android:id="@+id/etx_code"
         style="@style/etxForm"
+        android:drawableStart="@drawable/ic_person"
         android:hint="@string/ht_code" />
 
     <EditText
         android:id="@+id/etx_pwd"
         style="@style/etxForm"
+        android:drawableStart="@drawable/ic_lock"
         android:hint="@string/ht_pwd"
         android:inputType="textPassword" />
 

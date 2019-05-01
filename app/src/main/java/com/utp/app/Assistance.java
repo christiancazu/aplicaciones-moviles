@@ -15,18 +15,16 @@ import java.util.Date;
 
 public class Assistance extends Activity {
 
-    User user;
     TextView txvUser, txvAssist, txvCurrentAction;
     DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
     Date date = new Date();
-    Intent i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_assistance);
 
-        user = ((Global) this.getApplication()).getUser();
+        User user = ((Global) this.getApplication()).getUser();
 
         txvUser = findViewById(R.id.txv_user);
         txvCurrentAction = findViewById(R.id.txv_currentAction);
@@ -43,7 +41,7 @@ public class Assistance extends Activity {
     }
 
     public void goBack(View v) {
-        i = new Intent(this, Home.class);
+        Intent i = new Intent(this, Home.class);
         startActivity(i);
     }
 

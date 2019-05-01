@@ -11,15 +11,13 @@ import com.utp.app.models.User;
 public class UserData extends Activity {
 
     TextView txvUser, txvCode;
-    User user;
-    Intent i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_data);
 
-        user = ((Global) this.getApplication()).getUser();
+        User user = ((Global) this.getApplication()).getUser();
 
         txvUser = findViewById(R.id.txv_user);
         txvCode = findViewById(R.id.txv_code);
@@ -29,7 +27,7 @@ public class UserData extends Activity {
     }
 
     public void goToLogin(View v) {
-        i = new Intent(this, MainActivity.class);
+        Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
     }
 

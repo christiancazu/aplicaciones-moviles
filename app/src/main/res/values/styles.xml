@@ -15,13 +15,14 @@
     <style name="cv_song">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:padding">@dimen/cv_song_padding_content</item>
+        <item name="android:layout_marginBottom">@dimen/cv_margin_separation</item>
     </style>
 
     <!-- TextView base -->
     <style name="tv_song">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/tv_song_margin</item>
     </style>
 
     <!-- TextView song name -->

@@ -1,10 +1,12 @@
 package com.utp.app;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import com.utp.app.adapter.SongAdapter;
 import com.utp.app.model.Song;
@@ -14,13 +16,10 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    Field[] fields;
     ArrayList<Song> songs;
 
     RecyclerView rvSongs;
     SongAdapter songAdapter;
-
-    MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,13 +45,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     protected void setSongNamesOnResRawToSongList() {
-        fields = R.raw.class.getFields();
+        Field[] fields = R.raw.class.getFields();
+
         songs = new ArrayList<>();
+
+        MediaPlayer mediaPlayer;
 
         for (int i = 0; i < fields.length; i++) {
             mediaPlayer = MediaPlayer.create(this, getResId(fields[i].getName()));
             songs.add(new Song(fields[i].getName(), mediaPlayer.getDuration()));
         }
+    }
+
+    public void selectSong(View v) {
+        int itemPosition = rvSongs.getChildViewHolder(v).getAdapterPosition();
+
+        Intent intent = new Intent(this, MusicPlayer.class);
+        intent.putExtra("song", songs.get(itemPosition));
+        startActivity(intent);
     }
 
     protected int getResId(String songName) {

@@ -7,5 +7,5 @@
     <dimen name="song_duration_text_size">16sp</dimen>
     <dimen name="song_duration_text_size_on_music_player">24sp</dimen>
     <dimen name="layout_btn_media_player_margin">36dp</dimen>
-    <dimen name="btn_media_player_margin">24dp</dimen>
+    <dimen name="btn_media_player_margin">16dp</dimen>
 </resources>

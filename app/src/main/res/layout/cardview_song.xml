@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cv_song"
+    style="@style/cv_song">
+
+    <TextView
+        android:id="@+id/tv_song_name"
+        style="@style/tv_song_name"
+        android:text="@string/app_name" />
+
+    <TextView
+        android:id="@+id/tv_song_duration"
+        style="@style/tv_song_duration"
+        android:text="@string/app_name" />
+
+</android.support.v7.widget.CardView>

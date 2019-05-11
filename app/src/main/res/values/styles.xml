@@ -11,24 +11,64 @@
         <item name="colorPrimary">@color/primary</item>
     </style>
 
+    <!-- CardView cardview_song -->
     <style name="cv_song">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:padding">@dimen/cv_song_padding_content</item>
     </style>
 
+    <!-- TextView base -->
     <style name="tv_song">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
 
+    <!-- TextView song name -->
     <style name="tv_song_name" parent="tv_song">
         <item name="android:textSize">@dimen/song_name_text_size</item>
     </style>
 
+    <!-- TextView song duration -->
     <style name="tv_song_duration" parent="tv_song">
         <item name="android:textSize">@dimen/song_duration_text_size</item>
         <item name="android:layout_gravity">end|center_vertical</item>
+    </style>
+
+    <!-- LinearLayout container for buttons media player on content_music_player -->
+    <style name="layout_btn_media_player">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:layout_margin">@dimen/layout_btn_media_player_margin</item>
+    </style>
+
+    <!-- TextView base on content_music_player -->
+    <style name="tv_on_music_player">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- TextView song name inside of content_music_player -->
+    <style name="tv_song_name_on_music_player" parent="tv_on_music_player">
+        <item name="android:textColor">@color/accent</item>
+        <item name="android:textSize">@dimen/song_name_text_size_on_music_player</item>
+        <item name="android:layout_weight">4</item>
+    </style>
+
+    <!-- TextView song duration inside of content_music_player -->
+    <style name="tv_song_duration_on_music_player" parent="tv_on_music_player">
+        <item name="android:textSize">@dimen/song_duration_text_size_on_music_player</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <!-- Button media player preview/play-pause/next -->
+    <style name="btn_media_player">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/btn_media_player_margin</item>
     </style>
 
 </resources>

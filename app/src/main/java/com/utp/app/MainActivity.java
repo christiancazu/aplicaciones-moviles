@@ -30,7 +30,7 @@ public class MainActivity extends Activity {
     }
 
     public void playExternal(View v) {
-        String url = "https://scontent.cdninstagram.com/vp/d46ccbd350d3b2d4de6addf93307769b/5CD99CFB/t50.2886-16/59667320_372719056675819_3610000207917350912_n.mp4?_nc_ht=scontent.cdninstagram.com";
+        String url = "https://scontent.cdninstagram.com/vp/8b57af3a68ceea7a8d0b7fa39dce59d1/5CE4508A/t50.2886-16/61016544_321814305152618_7283928767922239784_n.mp4?_nc_ht=scontent.cdninstagram.com";
         videoView.setVideoURI(Uri.parse(url));
         videoView.start();
     }

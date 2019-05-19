@@ -9,3 +9,4 @@ UTP - Desarrollo en aplicaciones móviles
 * __[class_20-04](https://github.com/christiancazu/aplicaciones-moviles/tree/class_20-04)__ - homework done in class on 20-04-2019
 * __[material-design](https://github.com/christiancazu/aplicaciones-moviles/tree/material-design)__ - init settings to work with material design
 * __[pc1](https://github.com/christiancazu/aplicaciones-moviles/tree/pc1)__ - qualified practice 1
+* __[mediaplayer-uris](https://github.com/christiancazu/aplicaciones-moviles/tree/mediaplayer-uris)__ - play videos with mediaplayer from local, internal and external URI's

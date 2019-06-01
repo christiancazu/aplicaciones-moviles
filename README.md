@@ -1,8 +1,7 @@
 UTP - Desarrollo en aplicaciones móviles
 ========================================
 
-## Setting material design
+### material design boilerplate
 
-* Adding [material palette](https://www.materialpalette.com/) colors
+* Adding colors from [material palette](https://www.materialpalette.com/)
 * setting AppTheme colors
-* Every class binded with activity's have to extends now from Activity, and no more AppCompatActivity

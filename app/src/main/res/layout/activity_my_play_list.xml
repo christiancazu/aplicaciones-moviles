@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MyPlayList">
 
     <android.support.v7.widget.CardView
         android:id="@+id/android_card_view_example"
@@ -45,26 +46,26 @@
                 android:text="@string/user_description"
                 android:textColor="#8b8b8b" />
 
-            <Button
-                android:id="@+id/btn_launch"
-                android:layout_marginTop="24dp"
-                android:background="@color/primary"
-                android:layout_below="@+id/cardview_image"
-                android:text="@string/launch_playlist"
-                android:textColor="@color/text_light"
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_below="@+id/short_description"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="60dp"
                 android:layout_height="wrap_content"
-                android:onClick="goToPlayList" />
+                android:orientation="vertical">
 
-            <Button
-                android:background="@color/primary_dark"
-                android:layout_marginTop="24dp"
-                android:layout_below="@+id/btn_launch"
-                android:text="@string/view_my_playlist"
-                android:textColor="@color/text_light"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="goToMyPlayList" />
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="27dp"
+                    android:layout_centerHorizontal="true"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+
 
         </RelativeLayout>
 

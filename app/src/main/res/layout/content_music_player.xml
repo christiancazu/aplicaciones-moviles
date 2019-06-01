@@ -5,6 +5,12 @@
     android:background="@drawable/conductive_ripple"
     android:orientation="vertical">
 
+    <ImageButton
+        android:id="@+id/btn_add_song"
+        style="@style/btn_media_player"
+        android:background="@drawable/ic_add"
+        android:onClick="addToList" />
+
     <TextView
         android:id="@+id/tv_song_name"
         style="@style/tv_song_name_on_music_player" />

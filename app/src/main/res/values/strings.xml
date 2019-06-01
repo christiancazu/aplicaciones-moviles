@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">App</string>
+    <string name="app_name">Práctica Calificada II</string>
+    <string name="user_name">Christian Carrillo</string>
+    <string name="user_description">Full Stack Developer | Arequipa - Perú</string>
+    <string name="launch_playlist">Launch PlayList</string>
+    <string name="view_my_playlist">View My PlayList</string>
 </resources>

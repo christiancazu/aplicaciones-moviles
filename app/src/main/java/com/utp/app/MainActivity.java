@@ -10,63 +10,37 @@ import android.view.View;
 
 import com.utp.app.adapter.SongAdapter;
 import com.utp.app.model.Song;
+import com.utp.app.model.User;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    ArrayList<Song> songs;
-
-    RecyclerView rvSongs;
-    SongAdapter songAdapter;
+    User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // content_main
-        rvSongs = findViewById(R.id.rv_songs);
-        LinearLayoutManager llm = new LinearLayoutManager(this);
-        llm.setOrientation(LinearLayoutManager.VERTICAL);
-        rvSongs.setLayoutManager(llm);
-        //
-
-        setSongNamesOnResRawToSongList();
-        initSongAdapter();
-
-        /* String songName = getResources().getResourceEntryName(R.raw.zyzz_ringtone);*/
+        initUser();
     }
 
-    protected void initSongAdapter() {
-        songAdapter = new SongAdapter(songs);
-        rvSongs.setAdapter(songAdapter);
+    private void initUser() {
+
+        user = new User("Christian", 25);
+
+        ((Global) this.getApplication()).setUser(user);
     }
 
-    protected void setSongNamesOnResRawToSongList() {
-        Field[] fields = R.raw.class.getFields();
-
-        songs = new ArrayList<>();
-
-        MediaPlayer mediaPlayer;
-
-        for (int i = 0; i < fields.length; i++) {
-            mediaPlayer = MediaPlayer.create(this, getResId(fields[i].getName()));
-            songs.add(new Song(fields[i].getName(), mediaPlayer.getDuration()));
-        }
-    }
-
-    public void selectSong(View v) {
-        int itemPosition = rvSongs.getChildViewHolder(v).getAdapterPosition();
-
-        Intent intent = new Intent(this, MusicPlayer.class);
-        intent.putExtra("song", songs.get(itemPosition));
+    public void goToPlayList(View v) {
+        Intent intent = new Intent(this, PlayList.class);
         startActivity(intent);
     }
 
-    protected int getResId(String songName) {
-        return getResources().getIdentifier(songName, "raw",this.getPackageName());
+    public void goToMyPlayList(View v) {
+        Intent intent = new Intent(this, MyPlayList.class);
+        startActivity(intent);
     }
-
 }

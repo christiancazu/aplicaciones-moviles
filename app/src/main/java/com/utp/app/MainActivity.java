@@ -5,10 +5,12 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Point;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.PowerManager;
@@ -21,6 +23,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,12 +34,31 @@ public class MainActivity extends AppCompatActivity {
     private Display mDisplay;
     private PowerManager.WakeLock mWakeLock;
 
+    private Toast toast;
+
+    private int WIDTH_SCREEN, HEIGHT_SCREEN;
+
+    private String positionBall;
+
+    MediaPlayer mediaPlayer;
+
+    Foo foo;
+
     /**
      * Called when the activity is first created.
      */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        foo = new Foo();
+
+        // set width and height in current screen
+        setScreenDimensions();
+
+        initFooListener();
+
+        // initFooListener();
 
         // Get an instance of the SensorManager
         mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
@@ -56,6 +78,8 @@ public class MainActivity extends AppCompatActivity {
         mSimulationView = new SimulationView(this);
         mSimulationView.setBackgroundResource(R.drawable.wood);
         setContentView(mSimulationView);
+
+        toast = Toast.makeText(this, "", Toast.LENGTH_SHORT);
     }
 
     @Override
@@ -89,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
 
     class SimulationView extends FrameLayout implements SensorEventListener {
         // diameter of the balls in meters
-        private static final float sBallDiameter = 0.004f;
+        private static final float sBallDiameter = 0.010f;
         private static final float sBallDiameter2 = sBallDiameter * sBallDiameter;
 
         private final int mDstWidth;
@@ -332,7 +356,6 @@ public class MainActivity extends AppCompatActivity {
              * sensors (which always return data in a coordinate space aligned
              * to with the screen in its native orientation).
              */
-
             switch (mDisplay.getRotation()) {
                 case Surface.ROTATION_0:
                     mSensorX = event.values[0];
@@ -380,11 +403,94 @@ public class MainActivity extends AppCompatActivity {
             particleSystem.mBall.setTranslationX(x);
             particleSystem.mBall.setTranslationY(y);
 
+            ballPositionIndicator(x, y);
             // and make sure to redraw asap
             invalidate();
         }
 
         @Override
         public void onAccuracyChanged(Sensor sensor, int accuracy) {}
+    }
+
+    // custom functions:
+    public void ballPositionIndicator(float x, float y) {
+
+        positionBall = WIDTH_SCREEN/2 < x ? "onRight" : "onLeft";
+        positionBall += " - ";
+        positionBall += HEIGHT_SCREEN/2 > y ? "onTop" : "onBottom";
+
+        toastMessage(foo.isFoo() + "");
+
+        // playMusic((int)x);
+
+        if (WIDTH_SCREEN/2 > (int)x) {
+            foo.setFoo(true);
+        } else {
+            foo.setFoo(false);
+        }
+    }
+
+    /*private void playMusic(int x) {
+        if (x > WIDTH_SCREEN/2) {
+            mediaPlayer = MediaPlayer.create(this, R.raw.trance);
+        } else {
+            mediaPlayer = MediaPlayer.create(this, R.raw.trance_004);
+        }
+
+        //if (mediaPlayer.isPlaying()) {
+            //mediaPlayer.pause();
+        //} else {
+            //mediaPlayer.start();
+        //}
+    }*/
+
+    private void initFooListener() {
+        foo.setListener(new Foo.ChangeListener() {
+            @Override
+            public void onChange() {
+
+                playMusicx();
+            }
+        });
+    }
+
+    private void playMusicx() {
+        // mediaPlayer.stop();
+
+        if (foo.isFoo()) {
+           mediaPlayer = MediaPlayer.create(this, R.raw.trance);
+        } else {
+           mediaPlayer = MediaPlayer.create(this, R.raw.trance_004);
+        }
+
+        mediaPlayer.reset();
+        /* load the new source */
+        /* Prepare the mediaplayer */
+        //mediaPlayer.prepare();
+        /* start */
+        mediaPlayer.start();
+
+        if (mediaPlayer.isPlaying()) {
+            //mediaPlayer.pause();
+        } else {
+            //mediaPlayer.start();
+        }
+    }
+
+    private void toastMessage(String msg) {
+        toast.setText(msg);
+         toast.show();
+        if(!toast.getView().isShown()) {
+            toast.show();
+        }
+    }
+
+    private void setScreenDimensions() {
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+
+        WIDTH_SCREEN = size.x;
+        HEIGHT_SCREEN = size.y;
     }
 }

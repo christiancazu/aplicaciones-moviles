@@ -1,7 +1,6 @@
 UTP - Desarrollo en aplicaciones móviles
 ========================================
 
-### material design boilerplate
+### location
 
-* Adding colors from [material palette](https://www.materialpalette.com/)
-* setting AppTheme colors
+* location boilerplate project using google maps API.

@@ -10,3 +10,5 @@ UTP - Desarrollo en aplicaciones móviles
 * __[material-design](https://github.com/christiancazu/aplicaciones-moviles/tree/material-design)__ - init settings to work with material design
 * __[pc1](https://github.com/christiancazu/aplicaciones-moviles/tree/pc1)__ - qualified practice 1
 * __[mediaplayer-uris](https://github.com/christiancazu/aplicaciones-moviles/tree/mediaplayer-uris)__ - play videos with mediaplayer from local, internal and external URI's
+* __[pc2](https://github.com/christiancazu/aplicaciones-moviles/tree/pc2)__ - qualified practice 2 done in class.
+

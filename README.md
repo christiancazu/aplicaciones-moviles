@@ -1,7 +1,6 @@
 UTP - Desarrollo en aplicaciones móviles
 ========================================
 
-### material design boilerplate
+### class_08-06
 
-* Adding colors from [material palette](https://www.materialpalette.com/)
-* setting AppTheme colors
+*   usign volley

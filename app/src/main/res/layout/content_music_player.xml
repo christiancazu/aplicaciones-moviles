@@ -29,7 +29,7 @@
         <ImageButton
             android:id="@+id/btn_play_pause_song"
             style="@style/btn_media_player"
-            android:onClick="onPlayPause"/>
+            android:onClick="onPlayPause" />
 
         <ImageButton
             android:id="@+id/btn_next_song"

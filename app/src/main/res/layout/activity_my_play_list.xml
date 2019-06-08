@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     tools:context=".MyPlayList">
 
     <android.support.v7.widget.CardView
@@ -14,9 +14,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#fff"
             android:elevation="4dp"
-            android:layout_marginTop="144dp"
             android:padding="16dp">
 
             <ImageView
@@ -49,9 +47,15 @@
             <LinearLayout
                 android:layout_below="@+id/short_description"
                 android:layout_width="wrap_content"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="72dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_playlist"
+                    android:textColor="@color/accent" />
 
                 <TextView
                     android:id="@+id/textView2"
@@ -65,10 +69,8 @@
 
             </LinearLayout>
 
-
-
         </RelativeLayout>
 
     </android.support.v7.widget.CardView>
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

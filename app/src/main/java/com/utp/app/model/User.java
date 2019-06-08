@@ -1,18 +1,16 @@
 package com.utp.app.model;
 
-import android.app.Application;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 
 public class User implements Serializable {
     private String name;
-    private int edad;
+    private int age;
     private ArrayList<String> songs;
 
-    public User(String name, int edad) {
+    public User(String name, int age) {
         this.name = name;
-        this.edad = edad;
+        this.age = age;
         this.songs = new ArrayList<>();
     }
 
@@ -24,12 +22,12 @@ public class User implements Serializable {
         this.name = name;
     }
 
-    public int getEdad() {
-        return edad;
+    public int getAge() {
+        return age;
     }
 
-    public void setEdad(int edad) {
-        this.edad = edad;
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public ArrayList<String> getSongs() {

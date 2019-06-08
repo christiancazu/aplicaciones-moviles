@@ -31,7 +31,6 @@ public class PlayList extends AppCompatActivity {
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         rvSongs.setLayoutManager(llm);
-        //
 
         setSongNamesOnResRawToSongList();
         initSongAdapter();

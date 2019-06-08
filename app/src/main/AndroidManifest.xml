@@ -16,7 +16,6 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MyPlayList"></activity>
         <activity android:name=".PlayList" />
-        <activity android:name=".UserActivity" />
         <activity android:name=".MusicPlayer" />
         <activity android:name=".MainActivity">
             <intent-filter>

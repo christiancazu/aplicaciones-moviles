@@ -16,7 +16,6 @@ public class MyPlayList extends AppCompatActivity {
     TextView stringTextView;
     User user;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,28 +25,13 @@ public class MyPlayList extends AppCompatActivity {
 
         user = ((Global) this.getApplication()).getUser();
 
-        ArrayList<String> stringData = new ArrayList<String>();
-
-        //user.getSongs();
-
-        // Toast.makeText(this, user.getName(), Toast.LENGTH_SHORT).show();
+        ArrayList<String> stringData = new ArrayList<>();
 
         for (String song : user.getSongs()) {
             stringData.add(song);
         }
 
-       /*
-
-        stringData.add("ONE");
-        stringData.add("TWO");
-        stringData.add("THREE");
-        stringData.add("Four");
-        stringData.add("Five");
-        stringData.add("Six");
-        stringData.add("Seven");*/
-
-        for(int i=0; i < stringData.size(); i++){
-
+        for(int i=0; i < stringData.size(); i++) {
             stringTextView.setText(stringTextView.getText() + stringData.get(i) + " , ");
         }
     }

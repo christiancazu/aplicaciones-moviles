@@ -1,19 +1,11 @@
 package com.utp.app;
 
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.utp.app.adapter.SongAdapter;
-import com.utp.app.model.Song;
 import com.utp.app.model.User;
-
-import java.lang.reflect.Field;
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 

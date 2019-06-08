@@ -33,6 +33,8 @@ public class MusicPlayer extends AppCompatActivity {
 
     float aux = 0;
 
+    int SENSOR_CHANGE_FACTOR = 5;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +46,7 @@ public class MusicPlayer extends AppCompatActivity {
 
         initResSongWithSelectedSong();
 
-        toast = Toast.makeText(this, "", Toast.LENGTH_SHORT);
+        prepareToast();
 
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         sensor = sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
@@ -96,7 +98,7 @@ public class MusicPlayer extends AppCompatActivity {
                     isInit = true;
                 }
                 if (aux != event.values[0]) {
-                    if (event.values[0] > 5) {
+                    if (event.values[0] > SENSOR_CHANGE_FACTOR) {
                         mediaPlayer.start();
                         btnPlayPause.setImageResource(R.drawable.ic_pause);
                     } else {
@@ -111,11 +113,11 @@ public class MusicPlayer extends AppCompatActivity {
         };
     }
 
-    public void start() {
+    private void start() {
         sensorManager.registerListener(sensorEventListener, sensor, 2000 * 1000);
     }
 
-    public void stop() {
+    private void stop() {
         if (mediaPlayer.isPlaying()) {
             mediaPlayer.stop();
         }
@@ -123,17 +125,17 @@ public class MusicPlayer extends AppCompatActivity {
     }
 
     public void addToList(View v) {
-        //User user = ((Global) this.getApplication()).getUser();
-        //ArrayList<Song> songs = new ArrayList<>();
-        //songs.add(song);
-        //user.setSong(song.getName());
 
         ((Global) this.getApplication()).getUser().setSong(song.getName());
 
-        Toast.makeText(this, song.getName(), Toast.LENGTH_SHORT).show();
+        toastMessage("added to myPlayList: " + song.getName());
     }
 
-    public void toastMessage(String msg) {
+    private void prepareToast() {
+        toast = Toast.makeText(this, "", Toast.LENGTH_SHORT);
+    }
+
+    private void toastMessage(String msg) {
         toast.setText(msg);
         toast.show();
     }

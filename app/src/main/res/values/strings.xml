@@ -4,4 +4,5 @@
     <string name="user_description">Full Stack Developer | Arequipa - Perú</string>
     <string name="launch_playlist">Launch PlayList</string>
     <string name="view_my_playlist">View My PlayList</string>
+    <string name="my_playlist">My PlayList:</string>
 </resources>

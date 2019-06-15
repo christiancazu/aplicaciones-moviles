@@ -87,6 +87,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void redirectToHome(User user) {
+        Intent intent = new Intent(this, ProfileActivity.class);
+        intent.putExtra("user", user);
+        startActivity(intent);
     }
 
     private void initBindingEditText() {

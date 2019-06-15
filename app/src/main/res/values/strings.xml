@@ -3,4 +3,9 @@
     <string name="btn_sign_in">sign in</string>
     <string name="user_code">user code</string>
     <string name="pwd">password</string>
+    <string name="name">name: </string>
+    <string name="surname">surname: </string>
+    <string name="birthdate">birthdate: </string>
+    <string name="login">login: </string>
+    <string name="password">login: </string>
 </resources>

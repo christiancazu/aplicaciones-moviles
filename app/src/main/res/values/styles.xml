@@ -78,4 +78,40 @@
         <item name="android:layout_height">@dimen/img_size</item>
     </style>
 
+    <!-- TableLayout profile -->
+    <style name="tlProfile">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">8dp</item>
+    </style>
+
+    <!-- TableRow profile -->
+    <style name="trProfile">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- TextView profile info -->
+    <style name="tvProfileBase">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- TextView profile info -->
+    <style name="tvProfileInfo" parent="tvProfileBase">
+        <item name="android:gravity">right</item>
+    </style>
+
+    <!-- TextView profile data -->
+    <style name="tvProfileData" parent="tvProfileBase">
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:textColor">@color/text_light</item>
+    </style>
+
 </resources>

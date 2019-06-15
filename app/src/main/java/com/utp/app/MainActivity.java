@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -19,6 +20,7 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
@@ -62,11 +64,16 @@ public class MainActivity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
+                        try {
+                            resolveResponseErrorMessage(error);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                            toastMessage("Error: failed request to API");
+                        }
                         error.printStackTrace();
                     }
                 }
         );
-
         queue.add(stringRequest);
     }
 
@@ -83,7 +90,6 @@ public class MainActivity extends AppCompatActivity {
         user.setPassword(jo.getString("password"));
 
         redirectToHome(user);
-
     }
 
     private void redirectToHome(User user) {
@@ -95,6 +101,13 @@ public class MainActivity extends AppCompatActivity {
     private void initBindingEditText() {
         etCode = findViewById(R.id.et_code);
         etPwd = findViewById(R.id.et_pwd);
+    }
+
+    private void resolveResponseErrorMessage(VolleyError error) throws UnsupportedEncodingException, JSONException {
+        String responseBody = new String(error.networkResponse.data, "utf-8");
+        JSONObject data = new JSONObject(responseBody);
+        String message = data.optString("error");
+        toastMessage(message);
     }
 
     private void toastMessage(String msg) {

@@ -78,27 +78,19 @@
         <item name="android:layout_height">@dimen/img_size</item>
     </style>
 
-    <!-- TableLayout profile -->
-    <style name="tlProfile">
+    <!-- LinearLayout profile container (info & data) TextViews -->
+    <style name="lLayoutInfoData">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_gravity">center</item>
-        <item name="android:paddingLeft">16dp</item>
-        <item name="android:paddingRight">16dp</item>
-        <item name="android:paddingTop">8dp</item>
-    </style>
-
-    <!-- TableRow profile -->
-    <style name="trProfile">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
     </style>
 
     <!-- TextView profile info -->
     <style name="tvProfileBase">
-        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">6dp</item>
         <item name="android:textSize">16sp</item>
     </style>
 
@@ -109,8 +101,7 @@
 
     <!-- TextView profile data -->
     <style name="tvProfileData" parent="tvProfileBase">
-        <item name="android:gravity">center</item>
-        <item name="android:paddingLeft">8dp</item>
+        <item name="android:gravity">left</item>
         <item name="android:textColor">@color/text_light</item>
     </style>
 

@@ -28,86 +28,67 @@
                 android:adjustViewBounds="true"
                 android:src="@drawable/christian" />
 
-            <TableLayout style="@style/tlProfile">
+            <LinearLayout style="@style/lLayoutInfoData">
 
-                <TableRow style="@style/trProfile">
+                <TextView
+                    style="@style/tvProfileInfo"
+                    android:text="@string/name" />
 
-                    <TextView
-                        style="@style/tvProfileInfo"
-                        android:text="@string/name" />
+                <TextView
+                    android:id="@+id/tv_name"
+                    style="@style/tvProfileData" />
 
-                    <TextView
-                        android:id="@+id/tv_name"
-                        style="@style/tvProfileData" />
+            </LinearLayout>
 
-                </TableRow>
+            <LinearLayout style="@style/lLayoutInfoData">
 
-            </TableLayout>
+                <TextView
+                    style="@style/tvProfileInfo"
+                    android:text="@string/surname" />
 
-            <TableLayout style="@style/tlProfile">
+                <TextView
+                    android:id="@+id/tv_surname"
+                    style="@style/tvProfileData" />
 
-                <TableRow style="@style/trProfile">
+            </LinearLayout>
 
-                    <TextView
-                        style="@style/tvProfileInfo"
-                        android:text="@string/surname" />
+            <LinearLayout style="@style/lLayoutInfoData">
 
-                    <TextView
-                        android:id="@+id/tv_surname"
-                        style="@style/tvProfileData" />
+                <TextView
+                    style="@style/tvProfileInfo"
+                    android:text="@string/birthdate" />
 
-                </TableRow>
+                <TextView
+                    android:id="@+id/tv_birthdate"
+                    style="@style/tvProfileData" />
 
-            </TableLayout>
+            </LinearLayout>
 
-            <TableLayout style="@style/tlProfile">
+            <LinearLayout style="@style/lLayoutInfoData">
 
-                <TableRow style="@style/trProfile">
+                <TextView
+                    style="@style/tvProfileInfo"
+                    android:text="@string/login" />
 
-                    <TextView
-                        style="@style/tvProfileInfo"
-                        android:text="@string/birthdate" />
+                <TextView
+                    android:id="@+id/tv_login"
+                    style="@style/tvProfileData" />
 
-                    <TextView
-                        android:id="@+id/tv_birthdate"
-                        style="@style/tvProfileData" />
+            </LinearLayout>
 
-                </TableRow>
+            <LinearLayout style="@style/lLayoutInfoData">
 
-            </TableLayout>
+                <TextView
+                    style="@style/tvProfileInfo"
+                    android:text="@string/password" />
 
-            <TableLayout style="@style/tlProfile">
+                <TextView
+                    android:id="@+id/tv_pwd"
+                    style="@style/tvProfileData"
+                    android:text="*******" />
 
-                <TableRow style="@style/trProfile">
+            </LinearLayout>
 
-                    <TextView
-                        style="@style/tvProfileInfo"
-                        android:text="@string/login" />
-
-                    <TextView
-                        android:id="@+id/tv_login"
-                        style="@style/tvProfileData" />
-
-                </TableRow>
-
-            </TableLayout>
-
-            <TableLayout style="@style/tlProfile">
-
-                <TableRow style="@style/trProfile">
-
-                    <TextView
-                        style="@style/tvProfileInfo"
-                        android:text="@string/pwd" />
-
-                    <TextView
-                        android:id="@+id/tv_pwd"
-                        android:text="*******"
-                        style="@style/tvProfileData" />
-
-                </TableRow>
-
-            </TableLayout>
 
             <ImageButton
                 android:id="@+id/ib_eye"

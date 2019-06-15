@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">App</string>
+    <string name="app_name">API LOGIN</string>
+    <string name="btn_sign_in">sign in</string>
+    <string name="user_code">user code</string>
+    <string name="pwd">password</string>
 </resources>

@@ -27,10 +27,10 @@
     </style>
 
     <!-- EditText on form -->
-    <style name="etxForm" parent="formChildsMargin">
+    <style name="etForm" parent="formChildsMargin">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:drawablePadding">@dimen/icon_padding_etx</item>
+        <item name="android:drawablePadding">@dimen/et_icon_padding</item>
     </style>
 
     <!-- Button on form base-->
@@ -51,24 +51,24 @@
     </style>
 
     <!-- TextView on form base -->
-    <style name="txvForm">
+    <style name="tvForm">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">@dimen/tvw_title_height</item>
+        <item name="android:textSize">@dimen/tv_title_height</item>
     </style>
 
     <!-- TextView title -->
-    <style name="tvwTitle" parent="txvForm">
+    <style name="tvTitle" parent="tvForm">
         <item name="android:textColor">@color/accent</item>
     </style>
 
     <!-- TextView primary -->
-    <style name="tvwPrimary" parent="txvForm">
+    <style name="tvPrimary" parent="tvForm">
         <item name="android:textColor">@color/text_primary</item>
     </style>
 
     <!-- TextView secondary -->
-    <style name="tvwSecondary" parent="txvForm">
+    <style name="tvSecondary" parent="tvForm">
         <item name="android:textColor">@color/text_secondary</item>
     </style>
 

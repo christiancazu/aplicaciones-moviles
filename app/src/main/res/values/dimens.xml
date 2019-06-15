@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="form_margin">16dp</dimen>
+    <dimen name="etx_form_margin">16dp</dimen>
+    <dimen name="btn_form_margin">16dp</dimen>
+    <dimen name="img_size">144dp</dimen>
+    <dimen name="tvw_title_height">24sp</dimen>
+    <dimen name="icon_padding_etx">4dp</dimen>
+</resources>

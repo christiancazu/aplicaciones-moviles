@@ -20,7 +20,7 @@
     </style>
 
     <!-- EditText on form -->
-    <style name="et_form">
+    <style name="etForm">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_margin">@dimen/et_form_margin</item>
@@ -28,7 +28,7 @@
     </style>
 
     <!-- Button on form base-->
-    <style name="btn_form_base">
+    <style name="btnFormBase">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/text_light</item>
@@ -36,39 +36,39 @@
     </style>
 
     <!-- Button primary -->
-    <style name="btn_form_primary" parent="btn_form_base">
+    <style name="btnFormPrimary" parent="btnFormBase">
         <item name="android:background">@color/primary</item>
     </style>
 
     <!-- Button secondary -->
-    <style name="btn_form_secondary" parent="btn_form_base">
+    <style name="btnFormSecondary" parent="btnFormBase">
         <item name="android:background">@color/primary_dark</item>
     </style>
 
     <!-- TextView on form base -->
-    <style name="tv_form_base">
+    <style name="tvFormBase">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">@dimen/tv_title_height</item>
     </style>
 
     <!-- TextView title on form -->
-    <style name="tv_form_title" parent="tv_form_base">
+    <style name="tvFormTitle" parent="tvFormBase">
         <item name="android:textColor">@color/accent</item>
     </style>
 
     <!-- TextView primary on form -->
-    <style name="tv_form_primary" parent="tv_form_base">
+    <style name="tvFormPrimary" parent="tvFormBase">
         <item name="android:textColor">@color/text_primary</item>
     </style>
 
     <!-- TextView secondary on form -->
-    <style name="tv_form_secondary" parent="tv_form_base">
+    <style name="tvFormSecondary" parent="tvFormBase">
         <item name="android:textColor">@color/text_secondary</item>
     </style>
 
     <!-- ImageView logo -->
-    <style name="iv_form_logo">
+    <style name="ivFormLogo">
         <item name="android:layout_width">@dimen/img_size_logo</item>
         <item name="android:layout_height">@dimen/img_size_logo</item>
     </style>

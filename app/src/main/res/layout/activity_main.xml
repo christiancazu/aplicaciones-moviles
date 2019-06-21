@@ -5,19 +5,19 @@
     tools:context=".MainActivity">
 
     <ImageView
-        style="@style/iv_form_logo"
+        style="@style/ivFormLogo"
         android:background="@drawable/ic_launcher_background" />
 
     <EditText
-        style="@style/et_form"
+        style="@style/etForm"
         android:hint="@string/app_name" />
 
-    <Button style="@style/btn_form_primary" />
+    <Button style="@style/btnFormPrimary" />
 
-    <Button style="@style/btn_form_secondary" />
+    <Button style="@style/btnFormSecondary" />
 
     <TextView
-        style="@style/et_form"
+        style="@style/etForm"
         android:text="Hello World!" />
 
 </LinearLayout>

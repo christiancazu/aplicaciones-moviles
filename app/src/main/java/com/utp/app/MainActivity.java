@@ -126,6 +126,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void tvRememberMeOnClick(View v) {
+        cbxRememberMe.setChecked(!cbxRememberMe.isChecked());
+    }
+
     private void initBindingWidgets() {
         etCode = findViewById(R.id.et_code);
         etPwd = findViewById(R.id.et_pwd);

@@ -40,6 +40,7 @@
             android:layout_height="wrap_content" />
 
         <TextView
+            android:onClick="tvRememberMeOnClick"
             style="@style/tvFormSecondary"
             android:text="@string/remember_me" />
 

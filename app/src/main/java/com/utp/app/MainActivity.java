@@ -3,13 +3,10 @@ package com.utp.app;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -21,11 +18,13 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
-import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
-    final String BASE_URL = "http://10.0.2.2:80/backend/authenticate";
+    final String
+            BASE_URL = "http://10.0.2.2:80/backend/",
+            SIGN_IN_API = "authenticate",
+            USER_API = "user";
 
     Toast toast;
     EditText etCode, etPwd;
@@ -35,13 +34,29 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        initBindingEditText();
+        checkSession();
+
+        initBindingEditTexts();
     }
 
-    public void signIn(View v) {
-        String url = BASE_URL +
+    private void checkSession() {
+        String token = MySharedPreferences.getToken(this);
+
+        if (token.isEmpty()) return;
+
+        String url =
+                BASE_URL + USER_API +
+                "?token=" + token;
+
+        fetchAPI(url);
+    }
+
+    public void signInOnClick(View v) {
+        String url =
+                BASE_URL + SIGN_IN_API +
                 "?login=" + etCode.getText() +
                 "&password=" + etPwd.getText();
+
         fetchAPI(url);
     }
 
@@ -55,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         try {
-                            setUser(response);
+                            handleResponseSuccess(response);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -65,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         try {
-                            resolveResponseErrorMessage(error);
+                            handleResponseError(error);
                         } catch (Exception e) {
                             e.printStackTrace();
                             toastMessage("Error: failed request to API");
@@ -77,9 +92,20 @@ public class MainActivity extends AppCompatActivity {
         queue.add(stringRequest);
     }
 
-    private void setUser(String response) throws JSONException {
+    private void handleResponseSuccess(String response) throws JSONException {
 
         JSONObject jo = new JSONObject(response);
+
+        if (jo.has("token")) {
+            MySharedPreferences.setToken(this, jo.getString("token"));
+            checkSession();
+        } else {
+            User user = mapJsonToUser(jo);
+            redirectToProfile(user);
+        }
+    }
+
+    private User mapJsonToUser(JSONObject jo) throws JSONException {
 
         User user = new User();
         user.setId(jo.getInt("id"));
@@ -89,21 +115,26 @@ public class MainActivity extends AppCompatActivity {
         user.setLogin(jo.getString("login"));
         user.setPassword(jo.getString("password"));
 
-        redirectToHome(user);
+        return user;
     }
 
-    private void redirectToHome(User user) {
+    private void redirectToProfile(User user) {
         Intent intent = new Intent(this, ProfileActivity.class);
         intent.putExtra("user", user);
         startActivity(intent);
     }
 
-    private void initBindingEditText() {
+    private void initBindingEditTexts() {
         etCode = findViewById(R.id.et_code);
         etPwd = findViewById(R.id.et_pwd);
+
+        /////////////////////////
+        etCode.setText("1601227");
+        etPwd.setText("12345678");
+        //////////////////////////
     }
 
-    private void resolveResponseErrorMessage(VolleyError error) throws UnsupportedEncodingException, JSONException {
+    private void handleResponseError(VolleyError error) throws UnsupportedEncodingException, JSONException {
         String responseBody = new String(error.networkResponse.data, "utf-8");
         JSONObject data = new JSONObject(responseBody);
         String message = data.optString("error");

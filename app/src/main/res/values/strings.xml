@@ -8,4 +8,5 @@
     <string name="birthdate">birthdate: </string>
     <string name="login">login: </string>
     <string name="password">password: </string>
+    <string name="remember_me">remember me? </string>
 </resources>

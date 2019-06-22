@@ -25,7 +25,7 @@
 
     <Button
         style="@style/btnFormPrimary"
-        android:onClick="signIn"
+        android:onClick="signInOnClick"
         android:text="@string/btn_sign_in" />
 
 </LinearLayout>

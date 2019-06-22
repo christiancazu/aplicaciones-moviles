@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -21,13 +22,14 @@ import java.io.UnsupportedEncodingException;
 
 public class MainActivity extends AppCompatActivity {
 
-    final String
+    private final String
             BASE_URL = "http://10.0.2.2:80/backend/",
             SIGN_IN_API = "authenticate",
             USER_API = "user";
 
-    Toast toast;
-    EditText etCode, etPwd;
+    private Toast toast;
+    private EditText etCode, etPwd;
+    private CheckBox cbxRememberMe;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         checkSession();
 
-        initBindingEditTexts();
+        initBindingWidgets();
     }
 
     private void checkSession() {
@@ -93,7 +95,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void handleResponseSuccess(String response) throws JSONException {
-
         JSONObject jo = new JSONObject(response);
 
         if (jo.has("token")) {
@@ -106,7 +107,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private User mapJsonToUser(JSONObject jo) throws JSONException {
-
         User user = new User();
         user.setId(jo.getInt("id"));
         user.setName(jo.getString("name"));
@@ -119,19 +119,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void redirectToProfile(User user) {
+        if (!cbxRememberMe.isChecked()) MySharedPreferences.purgeToken(this);
+
         Intent intent = new Intent(this, ProfileActivity.class);
         intent.putExtra("user", user);
         startActivity(intent);
     }
 
-    private void initBindingEditTexts() {
+    private void initBindingWidgets() {
         etCode = findViewById(R.id.et_code);
         etPwd = findViewById(R.id.et_pwd);
 
-        /////////////////////////
-        etCode.setText("1601227");
-        etPwd.setText("12345678");
-        //////////////////////////
+        cbxRememberMe = findViewById(R.id.cbx_remember_me);
     }
 
     private void handleResponseError(VolleyError error) throws UnsupportedEncodingException, JSONException {

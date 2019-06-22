@@ -21,4 +21,10 @@ public class MySharedPreferences {
         editor.commit();
     }
 
+    public static void purgeToken(Context context) {
+        SharedPreferences.Editor editor = getPrefs(context).edit();
+        editor.remove("token");
+        editor.commit();
+    }
+
 }

@@ -28,4 +28,21 @@
         android:onClick="signInOnClick"
         android:text="@string/btn_sign_in" />
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="16dp">
+
+        <CheckBox
+            android:id="@+id/cbx_remember_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/tvFormSecondary"
+            android:text="@string/remember_me" />
+
+    </LinearLayout>
+
 </LinearLayout>

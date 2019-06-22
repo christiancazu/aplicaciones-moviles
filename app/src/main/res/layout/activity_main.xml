@@ -4,20 +4,41 @@
     style="@style/form"
     tools:context=".MainActivity">
 
-    <ImageView
-        style="@style/ivFormLogo"
-        android:background="@drawable/ic_launcher_background" />
+    <TextView
+        style="@style/tvFormTitle"
+        android:gravity="center"
+        android:text="Shared Preferences storing" />
 
     <EditText
+        android:id="@+id/et_value"
         style="@style/etForm"
-        android:hint="@string/app_name" />
+        android:hint="write something..." />
 
-    <Button style="@style/btnFormPrimary" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <Button style="@style/btnFormSecondary" />
+        <Button
+            style="@style/btnSharedPreferences"
+            android:backgroundTint="@color/primary"
+            android:onClick="sharedPreferences_OnClickSave"
+            android:text="save" />
+
+        <Button
+            style="@style/btnSharedPreferences"
+            android:backgroundTint="@color/primary_dark"
+            android:onClick="sharedPreferences_OnClickRead"
+            android:text="read" />
+
+    </LinearLayout>
 
     <TextView
         style="@style/etForm"
-        android:text="Hello World!" />
+        android:text="sharedPreferences stored:" />
+
+    <TextView
+        android:id="@+id/tv_shared_preferences"
+        style="@style/tvFormTitle"
+        android:gravity="center" />
 
 </LinearLayout>

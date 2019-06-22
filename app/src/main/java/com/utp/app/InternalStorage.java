@@ -27,11 +27,16 @@ public class InternalStorage {
 
     public static String getData(Context context) throws IOException {
         FileInputStream fis = null;
-        fis = context.openFileInput(FILENAME);
-        String data = getFileContent(fis, "UTF-8");
-        fis.close();
-
-        return data;
+        try {
+            fis = context.openFileInput(FILENAME);
+            String data = getFileContent(fis, "UTF-8");
+            return data;
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } finally {
+            if (fis == null) fis.close();
+        }
+        return null;
     }
 
     private static String getFileContent(FileInputStream fis, String encoding) throws IOException {

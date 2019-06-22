@@ -5,21 +5,29 @@
 
 	$request = $_GET['request']; 
 
-	if ($request == 'authenticate') {
+	switch ($request) {
+		
+		case 'authenticate':		
+			$login = isset($_GET['login']) ? $_GET['login'] : '';
+			$password = isset($_GET['password']) ? $_GET['password'] : '';
+		
+			if (validateParameters($login, $password)) {
+				$userController = new UserController();
+				$userController->authenticate($login, $password);	
+			}
+		break;
 
-		$login = isset($_GET['login']) ? $_GET['login'] : '';
-		$password = isset($_GET['password']) ? $_GET['password'] : '';
-	
-		if (validateParameters($login, $password)) {
+		case 'user':
+			$token = isset($_GET['token']) ? $_GET['token'] : '';
 			$userController = new UserController();
-			$userController->authenticate($login, $password);	
-		}		 
-	} else {
+			$userController->getUser($token);
+		break;
 
-		$response = new Response('resource no found', 404);
-		$response->getResponse();
-
-	}
+		default:
+			$response = new Response('resource no found', 404);
+			$response->getResponse();		
+	}	
+	
 
 	function validateParameters($login, $password) 
 	{
@@ -35,3 +43,4 @@
 		}
 		return true;		
 	}
+	

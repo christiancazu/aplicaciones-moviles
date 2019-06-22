@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 15, 2019 at 02:41 PM
+-- Generation Time: Jun 22, 2019 at 03:17 PM
 -- Server version: 10.1.40-MariaDB
 -- PHP Version: 7.3.5
 
@@ -34,15 +34,16 @@ CREATE TABLE `user` (
   `surname` varchar(64) COLLATE utf8mb4_bin DEFAULT NULL,
   `birthdate` date DEFAULT NULL,
   `login` varchar(64) COLLATE utf8mb4_bin DEFAULT NULL,
-  `password` varchar(64) COLLATE utf8mb4_bin DEFAULT NULL
+  `password` varchar(64) COLLATE utf8mb4_bin DEFAULT NULL,
+  `token` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `name`, `surname`, `birthdate`, `login`, `password`) VALUES
-(1, 'Christian', 'Carrillo', '1993-03-05', '1601227', '12345678');
+INSERT INTO `user` (`id`, `name`, `surname`, `birthdate`, `login`, `password`, `token`) VALUES
+(1, 'Christian', 'Carrillo', '1993-03-05', '1601227', '12345678', 'fNIm0JXWmteDsdPNMzTEVGjQXmcRBk2stPOhfM966RnvdfJO3rTTcj9wWKjsIfQm');
 
 --
 -- Indexes for dumped tables

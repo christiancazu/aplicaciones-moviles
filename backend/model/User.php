@@ -9,7 +9,14 @@
     private $login;
     private $password;
 
-    public function __construct(){}
+    public function __construct($data) {
+      $this->id = $data['id'];
+      $this->name = $data['name'];
+      $this->surname = $data['surname'];
+      $this->birthdate = $data['birthdate'];
+      $this->login = $data['login'];
+      $this->password = $data['password']; 
+    }
 
     public function getId() 
     {

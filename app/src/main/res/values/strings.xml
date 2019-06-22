@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">App</string>
+    <string name="shared_preferences_storage">Shared Preferences Storage</string>
+    <string name="internal_storage">Internal Storage</string>
 </resources>

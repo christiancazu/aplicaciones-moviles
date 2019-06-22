@@ -4,15 +4,15 @@
     style="@style/form"
     tools:context=".MainActivity">
 
-    <TextView
-        style="@style/tvFormTitle"
-        android:gravity="center"
-        android:text="Shared Preferences storing" />
-
     <EditText
         android:id="@+id/et_value"
         style="@style/etForm"
         android:hint="write something..." />
+
+    <TextView
+        style="@style/tvFormTitle"
+        android:gravity="center"
+        android:text="@string/shared_preferences_storage" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,13 +21,13 @@
         <Button
             style="@style/btnSharedPreferences"
             android:backgroundTint="@color/primary"
-            android:onClick="sharedPreferences_OnClickSave"
+            android:onClick="sharedPreferencesOnClickSave"
             android:text="save" />
 
         <Button
             style="@style/btnSharedPreferences"
             android:backgroundTint="@color/primary_dark"
-            android:onClick="sharedPreferences_OnClickRead"
+            android:onClick="sharedPreferencesOnClickRead"
             android:text="read" />
 
     </LinearLayout>
@@ -39,6 +39,42 @@
     <TextView
         android:id="@+id/tv_shared_preferences"
         style="@style/tvFormTitle"
-        android:gravity="center" />
+        android:gravity="center"
+        android:textColor="@color/text_light" />
+
+    <!-- internal storage section -->
+    <TextView
+        android:layout_marginTop="48dp"
+        style="@style/tvFormTitle"
+        android:gravity="center"
+        android:text="@string/internal_storage" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            style="@style/btnSharedPreferences"
+            android:backgroundTint="@color/primary"
+            android:onClick="internalStorageOnClickSave"
+            android:text="save" />
+
+        <Button
+            style="@style/btnSharedPreferences"
+            android:backgroundTint="@color/primary_dark"
+            android:onClick="internalStorageOnClickRead"
+            android:text="read" />
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/etForm"
+        android:text="internal stored:" />
+
+    <TextView
+        android:id="@+id/tv_internal_storage"
+        style="@style/tvFormTitle"
+        android:gravity="center"
+        android:textColor="@color/text_light" />
 
 </LinearLayout>

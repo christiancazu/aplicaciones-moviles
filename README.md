@@ -1,7 +1,7 @@
-UTP - Desarrollo en aplicaciones móviles
+Universidad Tecnológica del Perú
 ========================================
+## Desarrollo en aplicaciones móviles
 
-### material design boilerplate
+### test-storage
 
-* Adding colors from [material palette](https://www.materialpalette.com/)
-* setting AppTheme colors
+* Using persistence with SharedPreferences to storage & read data.

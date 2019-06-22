@@ -21,7 +21,7 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        toastMessage("login successful");
+        toastMessage("The session has been initialize!");
 
         initUser();
         setDataToActivity();
@@ -64,6 +64,17 @@ public class ProfileActivity extends AppCompatActivity {
         tvBirthdate.setText(user.getBirthdate());
         tvLogin.setText(user.getLogin());
         // tvPwd.setText(user.getPassword());
+    }
+
+    public void logOutOnClick(View v) {
+        MySharedPreferences.purgeToken(this);
+
+        redirectToLogin();
+    }
+
+    private void redirectToLogin() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
     private void toastMessage(String msg) {

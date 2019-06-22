@@ -3,11 +3,11 @@
     style="@style/form">
 
     <ImageView
-        style="@style/imgLogo"
+        style="@style/ivFormLogo"
         android:src="@drawable/utp" />
 
     <TextView
-        style="@style/tvTitle"
+        style="@style/tvFormTitle"
         android:text="@string/app_name" />
 
     <EditText

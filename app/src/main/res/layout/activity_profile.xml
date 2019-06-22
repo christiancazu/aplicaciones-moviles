@@ -89,7 +89,6 @@
 
             </LinearLayout>
 
-
             <ImageButton
                 android:id="@+id/ib_eye"
                 android:layout_width="wrap_content"

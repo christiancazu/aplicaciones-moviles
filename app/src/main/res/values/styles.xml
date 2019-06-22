@@ -11,71 +11,67 @@
         <item name="colorPrimary">@color/primary</item>
     </style>
 
-    <!-- margin base for all items on form -->
-    <style name="formChildsMargin">
-        <item name="android:layout_margin">@dimen/form_margin</item>
-    </style>
-
-    <!-- form layout -->
+    <!-- form LinearLayout -->
     <style name="form">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:layout_marginLeft">@dimen/form_margin</item>
-        <item name="android:layout_marginRight">@dimen/form_margin</item>
         <item name="android:gravity">center</item>
         <item name="android:orientation">vertical</item>
+        <item name="android:padding">@dimen/form_padding</item>
     </style>
 
     <!-- EditText on form -->
-    <style name="etForm" parent="formChildsMargin">
+    <style name="etForm">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/et_form_margin</item>
         <item name="android:drawablePadding">@dimen/et_icon_padding</item>
     </style>
 
     <!-- Button on form base-->
-    <style name="btnForm" parent="formChildsMargin">
+    <style name="btnFormBase">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/text_light</item>
+        <item name="android:layout_margin">@dimen/btn_form_margin</item>
     </style>
 
     <!-- Button primary -->
-    <style name="btnFormPrimary" parent="btnForm">
-        <item name="android:background">@color/primary</item>
+    <style name="btnFormPrimary" parent="btnFormBase">
+        <item name="android:backgroundTint">@color/primary</item>
     </style>
 
     <!-- Button secondary -->
-    <style name="btnFormSecondary" parent="btnForm">
-        <item name="android:background">@color/primary_dark</item>
+    <style name="btnFormSecondary" parent="btnFormBase">
+        <item name="android:backgroundTint">@color/primary_dark</item>
     </style>
 
     <!-- TextView on form base -->
-    <style name="tvForm">
+    <style name="tvFormBase">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">@dimen/tv_title_height</item>
     </style>
 
-    <!-- TextView title -->
-    <style name="tvTitle" parent="tvForm">
+    <!-- TextView title on form -->
+    <style name="tvFormTitle" parent="tvFormBase">
         <item name="android:textColor">@color/accent</item>
     </style>
 
-    <!-- TextView primary -->
-    <style name="tvPrimary" parent="tvForm">
+    <!-- TextView primary on form -->
+    <style name="tvFormPrimary" parent="tvFormBase">
         <item name="android:textColor">@color/text_primary</item>
     </style>
 
-    <!-- TextView secondary -->
-    <style name="tvSecondary" parent="tvForm">
+    <!-- TextView secondary on form -->
+    <style name="tvFormSecondary" parent="tvFormBase">
         <item name="android:textColor">@color/text_secondary</item>
     </style>
 
     <!-- ImageView logo -->
-    <style name="imgLogo">
-        <item name="android:layout_width">@dimen/img_size</item>
-        <item name="android:layout_height">@dimen/img_size</item>
+    <style name="ivFormLogo">
+        <item name="android:layout_width">@dimen/img_size_logo</item>
+        <item name="android:layout_height">@dimen/img_size_logo</item>
     </style>
 
     <!-- LinearLayout profile container (info & data) TextViews -->

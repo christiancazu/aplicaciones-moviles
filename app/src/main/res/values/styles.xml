@@ -37,12 +37,12 @@
 
     <!-- Button primary -->
     <style name="btnFormPrimary" parent="btnFormBase">
-        <item name="android:background">@color/primary</item>
+        <item name="android:backgroundTint">@color/primary</item>
     </style>
 
     <!-- Button secondary -->
     <style name="btnFormSecondary" parent="btnFormBase">
-        <item name="android:background">@color/primary_dark</item>
+        <item name="android:backgroundTint">@color/primary_dark</item>
     </style>
 
     <!-- TextView on form base -->

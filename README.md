@@ -1,7 +1,6 @@
 UTP - Desarrollo en aplicaciones móviles
 ========================================
 
-### material design boilerplate
+### using SQLite
 
-* Adding colors from [material palette](https://www.materialpalette.com/)
-* setting AppTheme colors
+* creating & consulting to db.

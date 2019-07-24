@@ -4,17 +4,28 @@
     style="@style/form"
     tools:context=".MainActivity">
 
-    <ImageView
+    <!--<ImageView
         style="@style/ivFormLogo"
         android:background="@drawable/ic_launcher_background" />
 
     <EditText
         style="@style/etForm"
         android:hint="@string/app_name" />
+-->
+    <Button
+        android:onClick="createAutomoviles"
+        style="@style/btnFormPrimary"
+        android:text="@string/create" />
 
-    <Button style="@style/btnFormPrimary" />
+    <Button
+        android:onClick="deleteAutomoviles"
+        style="@style/btnFormSecondary"
+        android:text="@string/delete" />
 
-    <Button style="@style/btnFormSecondary" />
+    <Button
+        android:onClick="findAutomoviles"
+        style="@style/btnFormPrimary"
+        android:text="@string/find" />
 
     <TextView
         style="@style/etForm"

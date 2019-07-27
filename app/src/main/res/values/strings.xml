@@ -10,4 +10,7 @@
     <string name="password">password: </string>
     <string name="remember_me">remember me? </string>
     <string name="log_out">log out</string>
+    <string name="testament"><u>Testament</u></string>
+    <string name="save"><u>save</u></string>
+    <string name="go_back"><u>go back</u></string>
 </resources>

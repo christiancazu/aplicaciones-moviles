@@ -37,12 +37,12 @@
 
     <!-- Button primary -->
     <style name="btnFormPrimary" parent="btnFormBase">
-        <item name="android:background">@color/primary</item>
+        <item name="android:backgroundTint">@color/primary</item>
     </style>
 
     <!-- Button secondary -->
     <style name="btnFormSecondary" parent="btnFormBase">
-        <item name="android:background">@color/primary_dark</item>
+        <item name="android:backgroundTint">@color/primary_dark</item>
     </style>
 
     <!-- TextView on form base -->
@@ -71,6 +71,25 @@
     <style name="ivFormLogo">
         <item name="android:layout_width">@dimen/img_size_logo</item>
         <item name="android:layout_height">@dimen/img_size_logo</item>
+    </style>
+
+    <!-- CardView cardview_song -->
+    <style name="cv_song">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/cv_margin_separation</item>
+    </style>
+
+    <!-- TextView base -->
+    <style name="tv_song">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/tv_song_margin</item>
+    </style>
+
+    <!-- TextView song name -->
+    <style name="tv_song_name" parent="tv_song">
+        <item name="android:textSize">@dimen/song_name_text_size</item>
     </style>
 
 </resources>

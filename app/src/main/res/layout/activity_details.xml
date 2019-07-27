@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/form"
+    tools:context=".DetailsActivity">
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/tv_song_name" />
+
+    <TextView
+        android:id="@+id/tv_sex"
+        style="@style/tv_song_name" />
+
+    <TextView
+        android:id="@+id/tv_age"
+        style="@style/tv_song_name" />
+
+    <Button
+        android:onClick="onClickGoBack"
+        style="@style/btnFormSecondary"
+        android:text="go back" />
+
+</LinearLayout>

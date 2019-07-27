@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/form"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        style="@style/etForm"
+        android:textColor="@color/accent"
+        android:text="register user:" />
+
+    <EditText
+        android:id="@+id/et_name"
+        style="@style/etForm"
+        android:hint="name" />
+
+    <EditText
+        android:id="@+id/et_sex"
+        style="@style/etForm"
+        android:hint="sex" />
+
+    <EditText
+        android:id="@+id/et_age"
+        style="@style/etForm"
+        android:hint="old age" />
+
+    <Button
+        android:onClick="onClickRegisterUser"
+        style="@style/btnFormPrimary"
+        android:text="register" />
+
+    <Button
+        android:onClick="onClickGoBack"
+        style="@style/btnFormSecondary"
+        android:text="go back" />
+
+
+</LinearLayout>

@@ -4,20 +4,24 @@
     style="@style/form"
     tools:context=".MainActivity">
 
-    <ImageView
-        style="@style/ivFormLogo"
-        android:background="@drawable/ic_launcher_background" />
-
-    <EditText
-        style="@style/etForm"
-        android:hint="@string/app_name" />
-
-    <Button style="@style/btnFormPrimary" />
-
-    <Button style="@style/btnFormSecondary" />
-
     <TextView
-        style="@style/etForm"
-        android:text="Hello World!" />
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_songs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        style="@style/btnFormPrimary"
+        android:onClick="onClickRegister"
+        android:text="register" />
 
 </LinearLayout>

@@ -34,8 +34,6 @@ public class ProfileActivity extends AppCompatActivity {
 
         ivProfile = findViewById(R.id.iv_profile);
 
-        toastMessage("The session has been initialize!");
-
         initUser();
         setDataToActivity();
 
@@ -76,7 +74,7 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     private void initUser() {
-        user = (User) getIntent().getSerializableExtra("user");
+        user = ((GlobalContext) this.getApplication()).getUser();
     }
 
     private void setDataToActivity() {
@@ -101,6 +99,8 @@ public class ProfileActivity extends AppCompatActivity {
     public void logOutOnClick(View v) {
         MySharedPreferences.purgeToken(this);
 
+        StorageManager.delete();
+
         redirectToLogin();
     }
 
@@ -109,11 +109,4 @@ public class ProfileActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void toastMessage(String msg) {
-        if (toast == null) {
-            toast = Toast.makeText(this, "", Toast.LENGTH_SHORT);
-        }
-        toast.setText(msg);
-        toast.show();
-    }
 }

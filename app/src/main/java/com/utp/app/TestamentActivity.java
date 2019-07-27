@@ -36,13 +36,10 @@ public class TestamentActivity extends AppCompatActivity {
     }
 
     public void onClickSaveImage(View v) {
-
         int radioButtonID = rgImage.getCheckedRadioButtonId();
         View radioButton = rgImage.findViewById(radioButtonID);
 
         String radioButtonIdSelected = getResources().getResourceEntryName(radioButton.getId());
-
-        Log.i("result", String.valueOf(StorageManager.save(this, radioButtonIdSelected)));
 
         Toast.makeText(
                 this,
@@ -53,10 +50,7 @@ public class TestamentActivity extends AppCompatActivity {
     }
 
     public void onClickGoBack(View v) {
-        User user = new User();
-
         Intent intent = new Intent(this, ProfileActivity.class);
-        intent.putExtra("user", user);
         startActivity(intent);
     }
 

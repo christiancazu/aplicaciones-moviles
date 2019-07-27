@@ -49,4 +49,12 @@ public class StorageManager {
         return false;
     }
 
+    public static void delete() {
+        File file = new File(PATH_STORAGE, "profile.jpg");
+        try {
+            file.delete();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

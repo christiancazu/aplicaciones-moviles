@@ -36,9 +36,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Intent intent = new Intent(this, TestamentActivity.class);
-        startActivity(intent);
-
         checkSession();
 
         initBindingWidgets();
@@ -105,8 +102,17 @@ public class MainActivity extends AppCompatActivity {
             checkSession();
         } else {
             User user = mapJsonToUser(jo);
-            redirectToProfile(user);
+
+            saveUserAsGlobalContext(user);
+
+            toastMessage("The session has been initialize!");
+
+            redirectToProfile();
         }
+    }
+
+    private void saveUserAsGlobalContext(User user) {
+        ((GlobalContext) this.getApplication()).setUser(user);
     }
 
     private User mapJsonToUser(JSONObject jo) throws JSONException {
@@ -121,11 +127,10 @@ public class MainActivity extends AppCompatActivity {
         return user;
     }
 
-    private void redirectToProfile(User user) {
+    private void redirectToProfile() {
         if (!cbxRememberMe.isChecked()) MySharedPreferences.purgeToken(this);
 
         Intent intent = new Intent(this, ProfileActivity.class);
-        intent.putExtra("user", user);
         startActivity(intent);
     }
 
